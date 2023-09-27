@@ -5,6 +5,15 @@
   position: absolute;
   right: -200px;
   bottom: 0;
+
+  @media screen and (max-width: 1365px) {
+    width: 146px;
+    height: 46px;
+    right: -140px;
+  }
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
 
 

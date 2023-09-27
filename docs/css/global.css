@@ -262,11 +262,43 @@ picture source {
   /* 120% */
 }
 
-.about__text {
+.about__text p {
   color: var(--text-color);
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
   /* 133.333% */
+}
+
+@media screen and (max-width: 1365px) {
+  .desc-figure {
+    width: 146px;
+    height: 46px;
+    right: -140px;
+  }
+
+  .about__title-h2 {
+    font-size: 40px;
+    width: 636px;
+  }
+
+  .about__title-h3 {
+    font-size: 18px;
+  }
+
+  .about__text p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .desc-figure {
+    display: none;
+  }
+
+  .about__title-h2 {
+    font-size: 24px;
+    width: 100%;
+  }
 }
