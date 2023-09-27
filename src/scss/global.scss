@@ -1,0 +1,50 @@
+@import "./base/mixins";
+@import "./base/fonts";
+@import "./base/reset";
+@import "./base/settings";
+@import "./base/sprite";
+@import "./base/vars";
+
+.none {
+  display: none !important;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px; 
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+.about__title-h2{
+  color: var(--text-color);
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 802px;
+}
+.about__title-h3{
+  color: var(--text-color);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 120% */
+}
+.about__text{
+  color: var(--text-color);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 133.333% */
+}
