@@ -1,6 +1,7 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
+  // Расчет длинны линии
   var calcFeatureLine = function calcFeatureLine() {
     var featureLine = document.querySelector('.feature__line');
     var featureListHeight = document.querySelector('.feature__list').offsetHeight;
@@ -13,6 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
   };
   calcFeatureLine();
   window.addEventListener("resize", calcFeatureLine);
+
+  // Авто-нумерация
   var featureNumbering = function featureNumbering() {
     var featureItems = document.querySelectorAll('.feature__item');
     featureItems.forEach(function (item, index) {
@@ -23,4 +26,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   };
   featureNumbering();
+  var reviewsSlider = new Swiper('.reviews__slider', {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.reviews__slider-next',
+      prevEl: '.reviews__slider-prev'
+    }
+  });
 });

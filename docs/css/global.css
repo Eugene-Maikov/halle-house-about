@@ -212,6 +212,36 @@ picture source {
   bottom: 0;
 }
 
+.benefits-svg {
+  width: 146px;
+  height: 146px;
+  fill: var(--accent-color);
+}
+
+.services-svg {
+  width: 84px;
+  height: 84px;
+  fill: var(--accent-color);
+}
+
+.whatsapp {
+  width: 42px;
+  height: 42px;
+  fill: #fff;
+}
+
+.telegram {
+  width: 42px;
+  height: 42px;
+}
+
+.email-icon,
+.phone-icon {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+}
+
 :root {
   --container-width: 1210px;
   --container-padding: 50px;
@@ -278,6 +308,21 @@ picture source {
     right: -140px;
   }
 
+  .benefits-svg {
+    width: 110px;
+    height: 110px;
+  }
+
+  .whatsapp {
+    width: 40px;
+    height: 40px;
+  }
+
+  .telegram {
+    width: 40px;
+    height: 40px;
+  }
+
   .about__title-h2 {
     font-size: 40px;
     width: 636px;
@@ -295,6 +340,32 @@ picture source {
 @media screen and (max-width: 767px) {
   .desc-figure {
     display: none;
+  }
+
+  .benefits-svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .services-svg {
+    width: 70px;
+    height: 70px;
+  }
+
+  .whatsapp {
+    width: 28px;
+    height: 28px;
+  }
+
+  .telegram {
+    width: 28px;
+    height: 28px;
+  }
+
+  .email-icon,
+  .phone-icon {
+    width: 14px;
+    height: 14px;
   }
 
   .about__title-h2 {
