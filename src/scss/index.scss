@@ -207,4 +207,74 @@
   }
 }
 
+.benefits {
+  padding: 50px 0 30px 0;
+  background: var(--light-color);
 
+  .about__title-h2 {
+    margin-bottom: 50px;
+
+    @media screen and (max-width: 1365px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  @media screen and (max-width: 1365px) {
+    padding: 60px 78px;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 33px 70px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+
+    @media screen and (max-width: 1365px) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 45px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (max-width: 1365px) {
+      flex-direction: row;
+    }
+  }
+
+  &__img {
+    margin-bottom: 33px;
+    width: 146px;
+    height: 146px;
+
+    @media screen and (max-width: 1365px) {
+      margin-right: 50px;
+      margin-bottom: 0;
+      height: 110px;
+      flex: 0 0 110px;
+    }
+    @media screen and (max-width: 767px) {
+      margin-right: 25px;
+      height: 60px;
+      flex: 0 0 60px;
+    }
+  }
+
+  &__description {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+
+    @media screen and (max-width: 1365px) {
+      text-align: left;
+    }
+  }
+}

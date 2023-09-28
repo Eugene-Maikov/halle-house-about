@@ -1,4 +1,4 @@
-.desc-figure{
+.desc-figure {
   fill: #DDD;
   width: 210px;
   height: 66px;
@@ -16,5 +16,21 @@
   }
 }
 
+.benefits-1,
+.benefits-2,
+.benefits-3 {
+  width: 146px;
+  height: 146px;
+  fill: var(--accent-color);
+
+  @media screen and (max-width: 1365px) {
+    width: 110px;
+    height: 110px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 60px;
+    height: 60px;
+  }
+}
 
 
