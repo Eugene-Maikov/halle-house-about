@@ -213,8 +213,8 @@ picture source {
 }
 
 :root {
-  --container-width: 1140px;
-  --container-padding: 15px;
+  --container-width: 1210px;
+  --container-padding: 50px;
   --font-main: Montserrat, Arial, sans-serif;
   --light-color: #F2F2F2;
   --bg-color: #fff;
@@ -300,5 +300,11 @@ picture source {
   .about__title-h2 {
     font-size: 24px;
     width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --container-padding: 15px;
   }
 }

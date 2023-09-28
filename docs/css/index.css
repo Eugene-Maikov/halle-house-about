@@ -138,6 +138,7 @@
   .intro {
     background-image: url("../assets/img/about/home-img-tablet.png");
     background-size: 403px 567px;
+    padding: 70px 0 198px 0;
   }
 
   .intro .about__title-h2 {
@@ -207,6 +208,7 @@
 @media screen and (max-width: 767px) {
   .intro {
     background-image: none;
+    padding: 40px 0;
   }
 
   .intro .about__title-h2 {

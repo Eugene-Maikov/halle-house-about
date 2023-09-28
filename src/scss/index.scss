@@ -11,9 +11,11 @@
   @media screen and (max-width: 1365px) {
     background-image: url('../assets/img/about/home-img-tablet.png');
     background-size: 403px 567px;
+    padding: 70px 0 198px 0;
   }
   @media screen and (max-width: 767px) {
     background-image: none;
+    padding: 40px 0;
   }
 
   .about__title-h2 {
