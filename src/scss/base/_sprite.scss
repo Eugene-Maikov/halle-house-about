@@ -16,9 +16,7 @@
   }
 }
 
-.benefits-1,
-.benefits-2,
-.benefits-3 {
+.benefits-svg {
   width: 146px;
   height: 146px;
   fill: var(--accent-color);
@@ -33,4 +31,54 @@
   }
 }
 
+.services-svg {
+  width: 84px;
+  height: 84px;
+  fill: var(--accent-color);
 
+  @media screen and (max-width: 767px) {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.whatsapp {
+  width: 42px;
+  height: 42px;
+  fill: #fff;
+
+  @media screen and (max-width: 1365px) {
+    width: 40px;
+    height: 40px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.telegram {
+  width: 42px;
+  height: 42px;
+
+  @media screen and (max-width: 1365px) {
+    width: 40px;
+    height: 40px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.email-icon,
+.phone-icon {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+
+  @media screen and (max-width: 767px) {
+    width: 14px;
+    height: 14px;
+  }
+}

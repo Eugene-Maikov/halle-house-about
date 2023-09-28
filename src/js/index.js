@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+  // Расчет длинны линии
   const calcFeatureLine = () => {
     const featureLine = document.querySelector('.feature__line')
 
@@ -15,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   calcFeatureLine()
   window.addEventListener("resize", calcFeatureLine)
 
-
+  // Авто-нумерация
   const featureNumbering = () => {
     const featureItems = document.querySelectorAll('.feature__item')
 
@@ -27,4 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
   featureNumbering()
+
+  const reviewsSlider = new Swiper('.reviews__slider', {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.reviews__slider-next',
+      prevEl: '.reviews__slider-prev',
+    },
+  })
 })
