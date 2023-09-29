@@ -11,6 +11,7 @@
   @media screen and (max-width: 1365px) {
     background-image: url('../assets/img/about/home-img-tablet.png');
     background-size: 403px 567px;
+    background-position: right 145px;
     padding: 70px 0 198px 0;
   }
   @media screen and (max-width: 767px) {
@@ -31,6 +32,12 @@
 
   .about__title-h3 {
     margin-bottom: 11px;
+  }
+
+  .about__text p{
+    @media screen and (max-width: 1365px) {
+      line-height: normal;
+    }
   }
 
   &__content {
@@ -223,7 +230,7 @@
     padding: 60px 78px;
   }
   @media screen and (max-width: 767px) {
-    padding: 33px 70px;
+    padding: 33px 0 70px 0;
   }
 
   &__inner {
@@ -255,11 +262,13 @@
     @media screen and (max-width: 1365px) {
       margin-right: 50px;
       margin-bottom: 0;
+      max-width: 110px;
       height: 110px;
       flex: 0 0 110px;
     }
     @media screen and (max-width: 767px) {
       margin-right: 25px;
+      max-width: 60px;
       height: 60px;
       flex: 0 0 60px;
     }
@@ -385,10 +394,12 @@
 
   &__img {
     margin-right: 15px;
+    max-width: 84px;
     height: 84px;
     flex: 0 0 84px;
 
     @media screen and (max-width: 767px) {
+      max-width: 70px;
       height: 70px;
       flex: 0 0 70px;
     }
@@ -598,16 +609,20 @@
   &__slider {
     position: relative;
     margin-right: 15px;
-  }
 
-  .swiper-wrapper {
-    @media screen and (max-width: 767px) {
-      padding-bottom: 50px;
+    @media screen and (max-width: 1200px) {
+      margin-right: 0;
     }
   }
 
-  .reviews__slider-prev,
-  .reviews__slider-next {
+  &__slider-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+  }
+
+  &__slider-prev,
+  &__slider-next {
     background: var(--bg-color);
     position: absolute;
     top: 50%;
@@ -616,13 +631,12 @@
     cursor: pointer;
 
     @media screen and (max-width: 767px) {
+      position: static;
       transform: none;
-      top: unset;
-      bottom: 0;
     }
   }
 
-  .reviews__slider-prev {
+  &__slider-prev {
     left: 15px;
 
     @media screen and (max-width: 1200px) {
@@ -633,7 +647,7 @@
     }
   }
 
-  .reviews__slider-next {
+  &__slider-next {
     right: 15px;
 
     @media screen and (max-width: 1200px) {
