@@ -33,4 +33,42 @@ document.addEventListener("DOMContentLoaded", function () {
       prevEl: '.reviews__slider-prev'
     }
   });
+
+  // Плеер для видео
+  var composeVideo = function composeVideo() {
+    var player = document.querySelectorAll('.youtube-player');
+    var link = document.querySelector('.reviews__preview-link');
+    if (player && link) {
+      var videoId = link.innerText.split('watch?v=')[1];
+      var videoThumbnailUrl = "https://img.youtube.com/vi/".concat(videoId, "/0.jpg");
+      var videoThumbnail = document.createElement('img');
+      videoThumbnail.src = videoThumbnailUrl;
+      player.forEach(function (item) {
+        item.appendChild(videoThumbnail);
+      });
+      var loadPlayer = function loadPlayer(evt) {
+        var target = evt.currentTarget;
+        var iframe = document.createElement('iframe');
+        iframe.src = "https://www.youtube.com/embed/".concat(videoId, "?autoplay=1");
+        iframe.setAttribute('width', 100 + '%');
+        iframe.setAttribute('height', 100 + '%');
+        iframe.setAttribute('allow', 'autoplay');
+        iframe.setAttribute('loading', 'lazy');
+        target.classList.remove('btn-dis');
+        videoThumbnail.style.display = 'none';
+        if (target.children.length) {
+          target.replaceChild(iframe, target.firstElementChild);
+        } else {
+          target.appendChild(iframe);
+        }
+      };
+      var config = {
+        once: true
+      };
+      Array.from(player).forEach(function (player) {
+        player.addEventListener('click', loadPlayer, config);
+      });
+    }
+  };
+  composeVideo();
 });

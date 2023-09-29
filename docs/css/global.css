@@ -242,6 +242,15 @@ picture source {
   fill: #fff;
 }
 
+.arrow-slider {
+  width: 49px;
+  height: 49px;
+  fill: var(--accent-color);
+  background: #fff;
+  display: block;
+  padding: 12px 12px;
+}
+
 :root {
   --container-width: 1210px;
   --container-padding: 50px;
@@ -337,6 +346,14 @@ picture source {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .arrow-slider {
+    width: 60px;
+    height: 60px;
+    padding: 14px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .desc-figure {
     display: none;
@@ -366,6 +383,14 @@ picture source {
   .phone-icon {
     width: 14px;
     height: 14px;
+  }
+
+  .arrow-slider {
+    width: 37px;
+    height: 37px;
+    background: var(--accent-color);
+    fill: #fff;
+    padding: 10px;
   }
 
   .about__title-h2 {

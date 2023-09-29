@@ -433,7 +433,7 @@
     margin-bottom: 50px;
 
     @media screen and (max-width: 767px) {
-      margin-bottom: 0;
+      margin-bottom: 40px;
     }
   }
 
@@ -484,6 +484,10 @@
         min-height: 188px;
       }
     }
+
+    &._video {
+      overflow: hidden;
+    }
   }
 
   &__content {
@@ -496,9 +500,12 @@
     @media screen and (max-width: 1200px) {
       width: 100%;
       margin-left: 0;
+      padding: 20px 22px 30px 22px;
     }
 
     @media screen and (min-width: 1201px) {
+      padding: 20px 15px;
+
       .about__text p {
         /*Ограничение по кол-ву строк*/
         display: -webkit-box;
@@ -526,16 +533,120 @@
       line-height: 24px; /* 120% */
       text-transform: uppercase;
       margin: 0 auto;
+
+      @media screen and (max-width: 767px) {
+        width: 100%;
+      }
     }
   }
 
+  // Видео
+  .youtube-player {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__preview-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 83px;
+    height: 83px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='83' height='83' viewBox='0 0 83 83' fill='none'%3e%3ccircle cx='41.5' cy='41.5' r='41.5' fill='white'/%3e%3cpath d='M34 57.8961V27L60.539 42.4481L34 57.8961Z' fill='%23C60000'/%3e%3c/svg%3e");
+    background-size: cover;
+    cursor: pointer;
+    display: none;
+
+    @media screen and (max-width: 1200px) {
+      width: 103px;
+      height: 103px;
+    }
+    @media screen and (max-width: 767px) {
+      width: 52px;
+      height: 52px;
+    }
+  }
+
+  .btn-dis {
+    .reviews__preview-btn {
+      display: block;
+    }
+  }
+
+  &__preview-link {
+    font-size: 0;
+    opacity: 0;
+  }
+
   // Слайдер
-  //.reviews__slider-prev,
-  //.reviews__slider-next {
-  //  width: 49px;
-  //  height: 49px;
-  //  background: var(--bg-color);
-  //}
+
+  &__item._slider {
+    .reviews__content {
+      margin-left: 0;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    margin-right: 15px;
+  }
+
+  .swiper-wrapper {
+    @media screen and (max-width: 767px) {
+      padding-bottom: 50px;
+    }
+  }
+
+  .reviews__slider-prev,
+  .reviews__slider-next {
+    background: var(--bg-color);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    cursor: pointer;
+
+    @media screen and (max-width: 767px) {
+      transform: none;
+      top: unset;
+      bottom: 0;
+    }
+  }
+
+  .reviews__slider-prev {
+    left: 15px;
+
+    @media screen and (max-width: 1200px) {
+      left: 19px;
+    }
+    @media screen and (max-width: 767px) {
+      left: 0;
+    }
+  }
+
+  .reviews__slider-next {
+    right: 15px;
+
+    @media screen and (max-width: 1200px) {
+      right: 19px;
+    }
+    @media screen and (max-width: 767px) {
+      right: 0;
+    }
+
+    .arrow-slider {
+      transform: rotate(180deg);
+    }
+  }
 }
 
 .block-contact {
